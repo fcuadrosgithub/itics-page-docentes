@@ -68,8 +68,10 @@ export default function Home() {
               <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-green-800/20 z-10"></div>
                 <img
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/ITSOEH.jpg"
                   alt="Campus Universitario"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
               </div>

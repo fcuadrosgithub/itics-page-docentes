@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-20 text-white">
+      <section className="relative bg-gradient-to-r from-blue-800 to-blue-600 py-20 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h1>
@@ -12,7 +12,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/aspirantes"
-                className="bg-white text-green-700 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors"
+                className="bg-white text-black hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors"
               >
                 Conoce más
               </Link>
@@ -39,7 +39,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-green-700">Nuestra Universidad</h2>
+                <h2 className="text-3xl font-bold mb-6 text-blue-700">Nuestra Universidad</h2>
                 <p className="text-gray-700 mb-4">
                   Fundada en 1975, El Instituto Tecnológico Superior del Occidente del Estado de Hidalgo tiene una educación superior
                   comprometida con la excelencia académica y la formación integral de profesionales que contribuyen al
@@ -52,21 +52,21 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-green-50 p-4 rounded-lg flex-1 min-w-[140px] text-center">
-                    <div className="text-3xl font-bold text-green-700 mb-1">35,000+</div>
+                    <div className="text-3xl font-bold text-blue-700 mb-1">35,000+</div>
                     <div className="text-sm text-gray-600">Estudiantes</div>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg flex-1 min-w-[140px] text-center">
-                    <div className="text-3xl font-bold text-green-700 mb-1">2,500+</div>
+                    <div className="text-3xl font-bold text-blue-700 mb-1">2,500+</div>
                     <div className="text-sm text-gray-600">Docentes</div>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg flex-1 min-w-[140px] text-center">
-                    <div className="text-3xl font-bold text-green-700 mb-1">120+</div>
+                    <div className="text-3xl font-bold text-blue-700 mb-1">120+</div>
                     <div className="text-sm text-gray-600">Programas</div>
                   </div>
                 </div>
               </div>
               <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-green-800/20 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-700/20 z-10"></div>
                 <img
                   src="/ITSOEH.jpg"
                   alt="Campus Universitario"
@@ -84,7 +84,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-green-600"
+                      className="h-6 w-6 text-blue-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -107,7 +107,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-green-600"
+                      className="h-6 w-6 text-blue-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -130,7 +130,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-green-600"
+                      className="h-6 w-6 text-blue-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

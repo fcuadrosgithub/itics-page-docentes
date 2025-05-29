@@ -11,7 +11,7 @@ export const metadata = {
   title: "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
   description: "Portal oficial del ITSOEH",
     generator: 'v0.dev'
-}
+}   
 
 export default function RootLayout({
   children,

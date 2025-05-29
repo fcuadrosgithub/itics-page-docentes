@@ -144,7 +144,7 @@ export default function DocentesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-800 to-green-600 py-16 text-white">
+      <section className="bg-gradient-to-r from-blue-800 to-blue-600 py-16 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-4">Docentes</h1>
@@ -264,7 +264,7 @@ export default function DocentesPage() {
   <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <BookOpen className="h-12 w-12 mx-auto text-green-600 mb-4" />
+            <BookOpen className="h-12 w-12 mx-auto text-blue-700 mb-4" />
             <h2 className="text-3xl font-bold mb-4">¿Interesado en unirte a nuestro cuerpo docente?</h2>
             <p className="text-gray-600 mb-8">
               Conoce las oportunidades para formar parte de nuestra comunidad académica y contribuir a la formación de
@@ -275,7 +275,7 @@ export default function DocentesPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Button 
                 variant="default" 
-                className="bg-green-600 hover:bg-green-700 flex items-center gap-2"
+                className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
                 onClick={() => setShowContent('vacantes')}
               >
                 <Briefcase className="h-5 w-5" />
@@ -294,7 +294,7 @@ export default function DocentesPage() {
             {/* Sección de Vacantes (aparece al hacer clic en el botón) */}
             {showContent === 'vacantes' && (
               <div className="mt-6 p-6 bg-gray-50 rounded-lg text-left animate-fade-in">
-                <h3 className="text-2xl font-semibold mb-6 text-green-700">Vacantes Disponibles</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-700">Vacantes Disponibles</h3>
                 
                 {vacantesAcademicas.map((vacante) => (
                   <div key={vacante.id} className="mb-8 last:mb-0">
@@ -318,7 +318,7 @@ export default function DocentesPage() {
             {/* Sección de Requisitos (aparece al hacer clic en el botón) */}
             {showContent === 'requisitos' && (
               <div className="mt-6 p-6 bg-gray-50 rounded-lg text-left animate-fade-in">
-                <h3 className="text-2xl font-semibold mb-6 text-green-700">Requisitos para Ingresar al Cuerpo Docente</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-700">Requisitos para Ingresar al Cuerpo Docente</h3>
                 
                 <div className="mb-8">
                   <h4 className="text-lg font-medium mb-3 text-gray-800">Requisitos Generales</h4>

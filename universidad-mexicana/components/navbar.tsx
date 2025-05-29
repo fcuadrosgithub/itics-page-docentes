@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
-            <div className="bg-green-600 text-white font-bold text-xl p-2 rounded mr-2">ITSOEH</div>
+            <div className="bg-blue-600 text-white font-bold text-xl p-2 rounded mr-2">ITSOEH</div>
             <span className="hidden md:inline-block font-semibold text-lg">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</span>
           </Link>
         </div>
@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="/publico" className="text-sm font-medium hover:text-green-600 transition-colors">
             Público
           </Link>
-          <Button variant="default" className="bg-green-600 hover:bg-green-700">
+          <Button variant="default" className="bg-blue-600 hover:bg-blue-700">
             Portal Institucional
           </Button>
         </nav>
@@ -47,7 +47,7 @@ export default function Navbar() {
               <Link href="/aspirantes" className="text-base font-medium hover:text-green-600 transition-colors">
                 Aspirantes
               </Link>
-              <Link href="/docentes" className="text-base font-medium hover:text-green-600 transition-colors">
+              <Link href="/docentes" className="text-base font-medium hover:text-blue-600 transition-colors">
                 Docentes
               </Link>
               <Link href="/alumnos" className="text-base font-medium hover:text-green-600 transition-colors">

@@ -71,8 +71,8 @@ export default function Navbar() {
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-500 to-blue-700 p-6 no-underline outline-none focus:shadow-md"
-                        href="/aspirantes"
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b 
+                        from-green-500 to-green-700 p-6 no-underline outline-none focus:shadow-md"
                       >
                         <div className="mt-4 mb-2 text-lg font-medium text-white">Aspirantes</div>
                         <p className="text-sm leading-tight text-white/90">
@@ -108,8 +108,8 @@ export default function Navbar() {
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-green-500 to-green-700 p-6 no-underline outline-none focus:shadow-md"
-                        href="/docentes"
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b 
+                        from-blue-500 to-blue-700 p-6 no-underline outline-none focus:shadow-md"
                       >
                         <div className="mt-4 mb-2 text-lg font-medium text-white">Docentes</div>
                         <p className="text-sm leading-tight text-white/90">

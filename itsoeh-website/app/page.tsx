@@ -69,37 +69,40 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Aspirantes */}
-            <Card className="group overflow-hidden border-2 border-transparent hover:border-blue-600 transition-all">
-              <div className="h-40 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                <GraduationCap className="h-20 w-20 text-white/80 group-hover:scale-110 transition-transform" />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-blue-800">Aspirantes</h3>
-                <p className="text-gray-600 mb-4">
-                  Descubre nuestra oferta educativa, proceso de admisión y becas disponibles.
-                </p>
-                <Link href="/aspirantes">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Explorar</Button>
-                </Link>
-              </CardContent>
-            </Card>
+{/* Aspirantes */}
+<Card className="group overflow-hidden border-2 border-transparent hover:border-green-600 transition-all">
+  <div className="h-40 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+    <GraduationCap className="h-20 w-20 text-white/80 group-hover:scale-110 transition-transform" />
+  </div>
+  <CardContent className="p-6">
+    <h3 className="text-2xl font-bold mb-2 text-green-800">Aspirantes</h3>
+    <p className="text-gray-600 mb-4">
+      Descubre nuestra oferta educativa, proceso de admisión y becas disponibles.
+    </p>
+    <Link href="/aspirantes">
+      <Button className="w-full bg-green-600 hover:bg-green-700">Explorar</Button>
+    </Link>
+  </CardContent>
+</Card>
 
-            {/* Docentes */}
-            <Card className="group overflow-hidden border-2 border-transparent hover:border-green-600 transition-all">
-              <div className="h-40 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-                <Users className="h-20 w-20 text-white/80 group-hover:scale-110 transition-transform" />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-green-800">Docentes</h3>
-                <p className="text-gray-600 mb-4">
-                  Información académica, investigación, recursos y desarrollo profesional.
-                </p>
-                <Link href="/docentes">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">Explorar</Button>
-                </Link>
-              </CardContent>
-            </Card>
+
+          {/* Docentes */}
+<Card className="group overflow-hidden border-2 border-transparent hover:border-blue-600 transition-all">
+  <div className="h-40 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+    <Users className="h-20 w-20 text-white/80 group-hover:scale-110 transition-transform" />
+  </div>
+  <CardContent className="p-6">
+    <h3 className="text-2xl font-bold mb-2 text-blue-900">Docentes</h3>
+    <p className="text-gray-600 mb-4">
+      Información académica, investigación, recursos y desarrollo profesional.
+    </p>
+    <Link href="/docentes">
+      <Button className="w-full bg-blue-600 hover:bg-blue-700">Explorar</Button>
+    </Link>
+  </CardContent>
+</Card>
+
+
 
             {/* Alumnos */}
             <Card className="group overflow-hidden border-2 border-transparent hover:border-purple-600 transition-all">
@@ -454,7 +457,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">2,500+</div>
+              <div className="text-5xl font-bold mb-2">1000+</div>
               <div className="text-xl font-medium mb-1">Estudiantes</div>
               <div className="text-white/70">Formándose en nuestras aulas</div>
             </div>

@@ -1,3 +1,6 @@
+
+"use client"
+import { useState } from "react"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
@@ -20,24 +23,26 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 export default function DocentesPage() {
+    const [mostrarPublicaciones, setMostrarPublicaciones] = useState(false)
+  const [mostrarTodosLosPerfiles, setMostrarTodosLosPerfiles] = useState(false)
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-800/80 z-10" />
-        <div
-          className="h-[300px] bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg?height=300&width=1920')" }}
-        />
-        <div className="absolute inset-0 flex items-center z-20">
-          <div className="container px-4">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Cuerpo Docente ITSOEH</h1>
-              <p className="text-xl text-white/90 mb-6">
-                Profesionales comprometidos con la excelencia académica y la formación integral
-              </p>
+{/* Hero Section */}
+<section className="relative">
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-800/90 z-10" />
+  <div
+    className="h-[300px] bg-cover bg-center"
+    style={{ backgroundImage: "url('/placeholder.svg?height=300&width=1920')" }}
+  />
+  <div className="absolute inset-0 flex items-center z-20">
+    <div className="container px-4">
+      <div className="max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Cuerpo Docente ITSOEH</h1>
+        <p className="text-xl text-white/90 mb-6">
+          Profesionales comprometidos con la excelencia académica y la formación integral
+        </p>
               <div className="flex flex-wrap gap-3">
                 <Badge className="bg-white/20 hover:bg-white/30 text-white">Docencia</Badge>
                 <Badge className="bg-white/20 hover:bg-white/30 text-white">Investigación</Badge>
@@ -68,43 +73,35 @@ export default function DocentesPage() {
         <section className="mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-8">
-              <div className="h-1 flex-1 bg-gradient-to-r from-white via-green-200 to-green-300"></div>
-              <h2 className="text-3xl font-bold text-green-800 px-6">Bienvenida a Docentes</h2>
-              <div className="h-1 flex-1 bg-gradient-to-l from-white via-green-200 to-green-300"></div>
+              <div className="h-1 flex-1 bg-gradient-to-r from-white via-gray-300 to-gray-500"></div>
+      <h2 className="text-3xl font-bold text-black px-6">Bienvenido a Docentes</h2>
+      <div className="h-1 flex-1 bg-gradient-to-l from-white via-gray-300 to-gray-500"></div>
             </div>
 
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="md:flex">
                 <div className="md:shrink-0 md:w-1/3">
-                  <div className="h-full bg-gradient-to-br from-green-500 to-green-700 p-8 flex items-center justify-center">
+                  <div className="h-full bg-gradient-to-br from-blue-500 to-blue-700 p-8 flex items-center justify-center">
                     <GraduationCap className="h-32 w-32 text-white/80" />
                   </div>
                 </div>
                 <div className="p-8 md:w-2/3">
-                  <div className="prose max-w-none">
-                    <p className="mb-4 text-lg leading-relaxed">
-                      Estimados docentes y futuros colaboradores académicos del Instituto Tecnológico Superior del
-                      Occidente del Estado de Hidalgo (ITSOEH), les damos la más cordial bienvenida a este espacio
-                      diseñado especialmente para ustedes.
-                    </p>
-                    <p className="mb-4 text-gray-700 leading-relaxed">
-                      En el ITSOEH reconocemos que nuestro cuerpo académico es el pilar fundamental para la formación de
-                      profesionales competentes y comprometidos con el desarrollo de nuestra región y país. Por ello,
-                      mantenemos un firme compromiso con la excelencia educativa, la investigación de vanguardia y el
-                      desarrollo continuo de nuestros docentes.
-                    </p>
-                    <p className="mb-4 text-gray-700 leading-relaxed">
-                      Nuestra institución se distingue por fomentar un ambiente de colaboración, innovación y
-                      crecimiento profesional, donde cada miembro del equipo docente tiene la oportunidad de desarrollar
-                      su potencial académico y contribuir significativamente a la generación y transmisión del
-                      conocimiento.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      Les invitamos a explorar los recursos, oportunidades y programas que el ITSOEH ofrece para su
-                      desarrollo profesional y a formar parte activa de nuestra comunidad educativa comprometida con la
-                      excelencia y la transformación social a través de la educación.
-                    </p>
-                  </div>
+<div className="prose max-w-none text-justify">
+  <p className="mb-4 text-lg leading-relaxed">
+    Estimados docentes y futuros colaboradores académicos del Instituto Tecnológico Superior del
+    Occidente del Estado de Hidalgo (ITSOEH), les damos la más cordial bienvenida a este espacio
+    diseñado especialmente para ustedes.
+  </p>
+  <p className="mb-4 text-gray-700 leading-relaxed">
+    Nos honra contar con un cuerpo académico comprometido con la excelencia, y extendemos esta
+    bienvenida también a quienes consideran formar parte de nuestra comunidad educativa.
+  </p>
+  <p className="mb-4 text-gray-700 leading-relaxed">
+    En el ITSOEH reconocemos la labor docente como pilar fundamental en la formación de profesionales
+    capaces de transformar positivamente su entorno. Agradecemos su interés y vocación por contribuir
+    al crecimiento de nuestra institución y al desarrollo de la región.
+  </p>
+</div>
                 </div>
               </div>
             </div>
@@ -113,20 +110,20 @@ export default function DocentesPage() {
 
         {/* Navegación por Tabs */}
         <Tabs defaultValue="perfiles" className="mb-12">
-          <div className="flex justify-center mb-8">
-            <TabsList className="grid w-full max-w-2xl grid-cols-2 p-1 bg-green-50">
-              <TabsTrigger
-                value="perfiles"
-                className="data-[state=active]:bg-green-600 data-[state=active]:text-white py-3"
-              >
+        <div className="flex justify-center mb-8">
+          <TabsList className="grid w-full max-w-2xl grid-cols-2 p-1 bg-blue-50">
+          <TabsTrigger
+          value="perfiles"
+          className="data-[state=active]:bg-blue-600 data-[state=active]:text-white py-3"
+          >
                 Perfiles Docentes
-              </TabsTrigger>
-              <TabsTrigger
-                value="areas"
-                className="data-[state=active]:bg-green-600 data-[state=active]:text-white py-3"
-              >
-                Áreas de Trabajo
-              </TabsTrigger>
+</TabsTrigger>
+      <TabsTrigger
+        value="areas"
+        className="data-[state=active]:bg-blue-600 data-[state=active]:text-white py-3"
+      >
+        Áreas de Trabajo
+      </TabsTrigger>
             </TabsList>
           </div>
 
@@ -139,238 +136,306 @@ export default function DocentesPage() {
                 excelencia académica y la formación integral de nuestros estudiantes.
               </p>
             </div>
+            
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Perfil Docente 1 */}
-              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="h-24 bg-gradient-to-r from-green-600 to-green-400"></div>
-                <CardContent className="pt-0 p-0">
-                  <div className="flex justify-center -mt-12">
-                    <Avatar className="h-24 w-24 border-4 border-white">
-                      <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Dr. Carlos Méndez Rodríguez" />
-                      <AvatarFallback className="bg-green-100 text-green-800 text-xl font-bold">CM</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div className="text-center px-6 py-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-1">Dr. Carlos Méndez Rodríguez</h3>
-                    <p className="text-green-600 font-medium mb-3">
-                      Departamento de Ingeniería en Sistemas Computacionales
-                    </p>
-                    <div className="flex justify-center mb-4">
-                      <Badge className="bg-green-100 text-green-800 hover:bg-green-200">Doctor en Ciencias</Badge>
-                    </div>
-                  </div>
+              {/* Perfil Doc Cuadros */}
+<Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <div className="h-24 bg-gradient-to-r from-blue-700 to-blue-500"></div>
+  <CardContent className="pt-0 p-0">
+    <div className="flex justify-center -mt-12">
+      <Avatar className="h-24 w-24 border-4 border-white">
+        <AvatarImage src="/drcuadros.jpg" alt="Dr. Javier Cuadros Romero" />
+        <AvatarFallback className="bg-blue-100 text-blue-800 text-xl font-bold">JC</AvatarFallback>
+      </Avatar>
+    </div>
+    <div className="text-center px-6 py-4">
+      <h3 className="text-xl font-bold text-gray-800 mb-1">Dr. Francisco Javier Cuadros Romero</h3>
+      <p className="text-blue-600 font-medium mb-3">
+        Departamento de Ingeniería en Tecnologías de la Información y Comunicaciones
+      </p>
+      <div className="flex justify-center mb-4">
+        <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">Docente en Interacción Humana-Computadora</Badge>
+      </div>
+    </div>
 
-                  <div className="bg-gray-50 px-6 py-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <GraduationCap className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
-                          <p className="text-sm text-gray-600">
-                            Doctorado en Ciencias Computacionales, Universidad Autónoma de México
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <BookOpen className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
-                          <p className="text-sm text-gray-600">
-                            Inteligencia Artificial, Desarrollo de Software, Seguridad Informática
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Briefcase className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
-                          <p className="text-sm text-gray-600">
-                            15 años de experiencia docente. Autor de 12 artículos en revistas indexadas sobre IA
-                            aplicada.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Mail className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
-                          <p className="text-sm text-gray-600">carlos.mendez@itsoeh.edu.mx</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <div className="bg-gray-50 px-6 py-4">
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <GraduationCap className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
+<div className="space-y-4">
+  <p className="text-sm text-gray-600 text-justify">
+    Ingeniera en electrónica y telecomunicaciones (UAEH).
+    <p className="text-sm text-gray-600 text-justify">Maestría en Ingeniería en Microelectrónica (IPN).</p>
+    <p className="text-sm text-gray-600 text-justify">Doctorado en Ciencias de la Información por parte del Instituto Avanzado
+    de Ciencia y Tecnología de Japón (JAIST).</p>
+  </p>
+</div>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <BookOpen className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
+            <p className="text-sm text-gray-600">
+              Inteligencia Artificial, Desarrollo de Software, Seguridad Informática
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Briefcase className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
+            <p className="text-sm text-gray-600">
+              15 años de experiencia docente. Autor de 12 artículos en revistas indexadas sobre IA aplicada.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Mail className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
+            <p className="text-sm text-gray-600">fcuadros@itsoeh.edu.mx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
 
-                  <div className="px-6 py-4 flex justify-center">
-                    <Button variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
-                      Ver Perfil Completo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+{/* Perfil Lic Eunice */}
+<Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <div className="h-24 bg-gradient-to-r from-blue-600 to-blue-400"></div>
+  <CardContent className="pt-0 p-0">
+    <div className="flex justify-center -mt-12">
+      <Avatar className="h-24 w-24 border-4 border-white">
+        <AvatarImage src="/licEunice.jpg" alt="Licenciada Eunice" />
+        <AvatarFallback className="bg-blue-100 text-blue-800 text-xl font-bold">ES</AvatarFallback>
+      </Avatar>
+    </div>
+    <div className="text-center px-6 py-4">
+      <h3 className="text-xl font-bold text-gray-800 mb-1">Lic. Eunice Santiago Manzano</h3>
+      <p className="text-blue-600 font-medium mb-3">
+        Departamento de Ingeniería en Tecnologías de la Información y Comunicaciones
+      </p>
+      <div className="flex justify-center mb-4">
+        <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">Maestra en Programación</Badge>
+      </div>
+    </div>
 
-              {/* Perfil Docente 2 */}
-              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="h-24 bg-gradient-to-r from-green-600 to-green-400"></div>
-                <CardContent className="pt-0 p-0">
-                  <div className="flex justify-center -mt-12">
-                    <Avatar className="h-24 w-24 border-4 border-white">
-                      <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Dra. Laura Sánchez Vega" />
-                      <AvatarFallback className="bg-green-100 text-green-800 text-xl font-bold">LS</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div className="text-center px-6 py-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-1">Dra. Laura Sánchez Vega</h3>
-                    <p className="text-green-600 font-medium mb-3">Departamento de Ingeniería Industrial</p>
-                    <div className="flex justify-center mb-4">
-                      <Badge className="bg-green-100 text-green-800 hover:bg-green-200">Doctora en Ingeniería</Badge>
-                    </div>
-                  </div>
+    <div className="bg-gray-50 px-6 py-4">
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <GraduationCap className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
+            <p className="text-sm text-gray-600">
+              Licenciada en Sistemas Computacionales, Universidad Autónoma del Estado de Hidalgo
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <BookOpen className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
+            <p className="text-sm text-gray-600">
+              Optimización de Procesos, Gestión de Calidad, Industria 4.0
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Briefcase className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
+            <p className="text-sm text-gray-600">
+              10 años en la industria y 15 en docencia.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Mail className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
+            <p className="text-sm text-gray-600">esantiago@itsoeh.edu.mx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
 
-                  <div className="bg-gray-50 px-6 py-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <GraduationCap className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
-                          <p className="text-sm text-gray-600">
-                            Doctorado en Ingeniería Industrial, Instituto Politécnico Nacional
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <BookOpen className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
-                          <p className="text-sm text-gray-600">
-                            Optimización de Procesos, Gestión de Calidad, Industria 4.0
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Briefcase className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
-                          <p className="text-sm text-gray-600">
-                            10 años en la industria y 8 en docencia. Coautora de 2 libros sobre gestión industrial.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Mail className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
-                          <p className="text-sm text-gray-600">laura.sanchez@itsoeh.edu.mx</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+{mostrarTodosLosPerfiles && (
+<Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <div className="h-24 bg-gradient-to-r from-blue-700 to-blue-500"></div>
+  <CardContent className="pt-0 p-0">
+    <div className="flex justify-center -mt-12">
+      <Avatar className="h-24 w-24 border-4 border-white">
+          <AvatarImage src="/mtroSaul.jpg" alt="Mtro. Saul" />
+          <AvatarFallback className="bg-purple-100 text-purple-800 text-xl font-bold">AD</AvatarFallback>
+        </Avatar>
+      </div>
+      <div className="text-center px-6 py-4">
+        <h3 className="text-xl font-bold text-gray-800 mb-1">Mtro. Saúl Isaí Soto Ortiz</h3>
+      <p className="text-blue-600 font-medium mb-3">
+        Departamento de Ingeniería en Tecnologías de la Información y Comunicaciones
+      </p>
+        <div className="flex justify-center mb-4">
+          <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">
+            Docente en Redes de Computadoras
+          </Badge>
+        </div>
+      </div>
 
-                  <div className="px-6 py-4 flex justify-center">
-                    <Button variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
-                      Ver Perfil Completo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+     <div className="bg-gray-50 px-6 py-4">
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <GraduationCap className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
+            <p className="text-sm text-gray-600">
+              Ingeniero en mecatronica
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <BookOpen className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
+            <p className="text-sm text-gray-600">
+              Redes, IoT, LoRa and WiFi
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Briefcase className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
+            <p className="text-sm text-gray-600">
+              Experiencia en proyectos internacionales, Investigaciones en Internet de las Cosas.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Mail className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
+            <p className="text-sm text-gray-600">ssoto@itsoeh.edu.mx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+)}
 
-              {/* Perfil Docente 3 */}
-              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="h-24 bg-gradient-to-r from-green-600 to-green-400"></div>
-                <CardContent className="pt-0 p-0">
-                  <div className="flex justify-center -mt-12">
-                    <Avatar className="h-24 w-24 border-4 border-white">
-                      <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Mtro. Javier López Torres" />
-                      <AvatarFallback className="bg-green-100 text-green-800 text-xl font-bold">JL</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div className="text-center px-6 py-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-1">Mtro. Javier López Torres</h3>
-                    <p className="text-green-600 font-medium mb-3">
-                      Departamento de Ciencias Económico-Administrativas
-                    </p>
-                    <div className="flex justify-center mb-4">
-                      <Badge className="bg-green-100 text-green-800 hover:bg-green-200">
-                        Maestro en Administración
-                      </Badge>
-                    </div>
-                  </div>
+              {/* Perfil Mtra. Yadira */}
+<Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <div className="h-24 bg-gradient-to-r from-blue-700 to-blue-500"></div>
+  <CardContent className="pt-0 p-0">
+    <div className="flex justify-center -mt-12">
+      <Avatar className="h-24 w-24 border-4 border-white">
+        <AvatarImage src="/mtraYadira.jpg" alt="Maestra Yadira" />
+        <AvatarFallback className="bg-blue-100 text-blue-800 text-xl font-bold">YG</AvatarFallback>
+      </Avatar>
+    </div>
+    <div className="text-center px-6 py-4">
+      <h3 className="text-xl font-bold text-gray-800 mb-1">Mtra. Yadira Eufemia Gaspar Morales</h3>
+      <p className="text-blue-600 font-medium mb-3">
+        Departamento de Ingeniería en Tecnologías de la Información y Comunicaciones
+      </p>
+      <div className="flex justify-center mb-4">
+        <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">
+          Maestra en Contabilidad
+        </Badge>
+      </div>
+    </div>
 
-                  <div className="bg-gray-50 px-6 py-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <GraduationCap className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
-                          <p className="text-sm text-gray-600">
-                            Maestría en Administración de Empresas, Universidad Veracruzana
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <BookOpen className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
-                          <p className="text-sm text-gray-600">
-                            Emprendimiento, Desarrollo Organizacional, Economía Regional
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Briefcase className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
-                          <p className="text-sm text-gray-600">
-                            12 años como consultor empresarial. Coordinador de 3 proyectos de incubación de empresas.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="bg-green-100 p-2 rounded-full mt-1">
-                          <Mail className="h-4 w-4 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
-                          <p className="text-sm text-gray-600">javier.lopez@itsoeh.edu.mx</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="px-6 py-4 flex justify-center">
-                    <Button variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
-                      Ver Perfil Completo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+    <div className="bg-gray-50 px-6 py-4">
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <GraduationCap className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Formación Académica</h4>
+            <p className="text-sm text-gray-600">
+              Maestría en Contabilidad, Universidad Autónoma del Estado de Hidalgo.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <BookOpen className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Líneas de Investigación</h4>
+            <p className="text-sm text-gray-600">
+              Emprendimiento, Desarrollo Organizacional, Economía Regional
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Briefcase className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Experiencia y Publicaciones</h4>
+            <p className="text-sm text-gray-600">
+              12 años como consultor empresarial. Coordinador de 3 proyectos de desarrollo empresarial.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="bg-blue-100 p-2 rounded-full mt-1">
+            <Mail className="h-4 w-4 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-gray-700 text-sm">Contacto</h4>
+            <p className="text-sm text-gray-600">ygaspar@itsoeh.edu.mx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
             </div>
 
-            <div className="mt-12 text-center">
-              <Button className="bg-green-600 hover:bg-green-700">Ver Todos los Perfiles</Button>
-            </div>
+
+<div className="mt-12 text-center">
+  <Button
+    className="bg-gray-200 text-gray-800 hover:bg-gray-300"
+    onClick={() => setMostrarTodosLosPerfiles(prev => !prev)}
+  >
+    {mostrarTodosLosPerfiles ? "Ocultar Perfiles" : "Ver Todos los Perfiles"}
+  </Button>
+
+</div>
           </TabsContent>
 
           {/* Contenido: Áreas de Trabajo */}
@@ -580,7 +645,15 @@ export default function DocentesPage() {
                     incluyendo programas de capacitación, becas para estudios de posgrado, estancias en otras
                     instituciones y participación en eventos académicos nacionales e internacionales.
                   </p>
-                  <Button className="bg-green-600 hover:bg-green-700">Conocer Programas</Button>
+                  <a
+  href="https://www.itsoeh.edu.mx/front/planeacion.html"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="bg-green-600 hover:bg-green-700">
+    Conocer Programas
+  </Button>
+</a>
                 </div>
               </div>
             </div>
@@ -591,52 +664,52 @@ export default function DocentesPage() {
         <section className="mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-8">
-              <div className="h-1 flex-1 bg-gradient-to-r from-white via-green-200 to-green-300"></div>
-              <h2 className="text-3xl font-bold text-green-800 px-6">Convocatorias</h2>
-              <div className="h-1 flex-1 bg-gradient-to-l from-white via-green-200 to-green-300"></div>
+              <div className="h-1 flex-1 bg-gradient-to-r from-white via-gray-300 to-gray-400"></div>
+      <h2 className="text-3xl font-bold text-black px-6">Convocatorias</h2>
+      <div className="h-1 flex-1 bg-gradient-to-l from-white via-gray-300 to-gray-400"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-2 bg-green-600"></div>
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <Badge className="bg-green-100 text-green-800 hover:bg-green-200">Abierta</Badge>
-                    <span className="text-sm text-gray-500">Hasta: 30/06/2025</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Profesor de Tiempo Completo</h3>
-                  <p className="text-gray-600 mb-4">
-                    Convocatoria para cubrir plaza de Profesor de Tiempo Completo en el área de Ingeniería en Sistemas
-                    Computacionales, con especialidad en Inteligencia Artificial y Ciencia de Datos.
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-                    <FileText className="h-4 w-4" />
-                    <span>Requisitos y documentación</span>
-                  </div>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">Ver Detalles</Button>
-                </CardContent>
-              </Card>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+    <div className="h-2 bg-indigo-600"></div>
+    <CardContent className="p-6">
+      <div className="flex justify-between items-center mb-4">
+        <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-200">Abierta</Badge>
+        <span className="text-sm text-gray-500">Hasta: 30/06/2025</span>
+      </div>
+      <h3 className="text-xl font-bold text-indigo-800 mb-2">Profesor de Tiempo Completo</h3>
+      <p className="text-gray-600 mb-4">
+        Convocatoria para cubrir plaza de Profesor de Tiempo Completo en el área de Ingeniería en Sistemas
+        Computacionales, con especialidad en Inteligencia Artificial y Ciencia de Datos.
+      </p>
+      <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+        <FileText className="h-4 w-4" />
+        <span>Requisitos y documentación</span>
+      </div>
+      <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Ver Detalles</Button>
+    </CardContent>
+  </Card>
 
-              <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-2 bg-green-600"></div>
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <Badge className="bg-green-100 text-green-800 hover:bg-green-200">Abierta</Badge>
-                    <span className="text-sm text-gray-500">Hasta: 15/07/2025</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Estímulos al Desempeño Docente</h3>
-                  <p className="text-gray-600 mb-4">
-                    Programa de Estímulos al Desempeño del Personal Docente para reconocer la calidad, dedicación y
-                    permanencia en el desempeño de las actividades académicas.
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-                    <FileText className="h-4 w-4" />
-                    <span>Bases y lineamientos</span>
-                  </div>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">Ver Detalles</Button>
-                </CardContent>
-              </Card>
-            </div>
+<Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+    <div className="h-2 bg-indigo-600"></div>
+    <CardContent className="p-6">
+      <div className="flex justify-between items-center mb-4">
+        <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-200">Abierta</Badge>
+        <span className="text-sm text-gray-500">Hasta: 15/07/2025</span>
+      </div>
+      <h3 className="text-xl font-bold text-indigo-800 mb-2">Estímulos al Desempeño Docente</h3>
+      <p className="text-gray-600 mb-4">
+        Programa de Estímulos al Desempeño del Personal Docente para reconocer la calidad, dedicación y
+        permanencia en el desempeño de las actividades académicas.
+      </p>
+      <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+        <FileText className="h-4 w-4" />
+        <span>Bases y lineamientos</span>
+      </div>
+      <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Ver Detalles</Button>
+    </CardContent>
+  </Card>
+</div>
           </div>
         </section>
       </div>

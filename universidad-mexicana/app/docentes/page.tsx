@@ -16,51 +16,51 @@ export default function DocentesPage() {
   const docentes = [
     {
       id: 1,
-      nombre: "Dra. Valeria Rodríguez",
-      titulo: "Doctora en Ciencias Computacionales",
-      departamento: "Facultad de Ingeniería",
-      especialidad: "Inteligencia Artificial",
-      imagen: "/Docente2.jpg",
+      nombre: "Dra. Talhia Heidi Hernández Omaña",
+      titulo: "Doctora en Ciencias de datos",
+      departamento:"Base de Datos",
+      correo: "thernandez@itsoeh.edu.mx",
+      imagen: "/DraThali.jpg",
     },
     {
       id: 2,
-      nombre: "Dr. Carlos Mendoza",
-      titulo: "Doctor en Física",
-      departamento: "Facultad de Ciencias",
-      especialidad: "Física Cuántica",
-      imagen: "/Docente1.jpg",
+      nombre: "Mtro. Saul Isai Soto Ortiz",
+      titulo: "Maestria en Redes y Ciberseguridad ",
+      departamento:"Redes de Computadoras",
+      correo: "ssoto@itsoeh.edu.mx",
+      imagen: "/MtroSaul.jpg",
     },
     {
       id: 3,
-      nombre: "Dra. Sofía Hernández",
-      titulo: "Doctora en Literatura",
-      departamento: "Facultad de Filosofía y Letras",
-      especialidad: "Literatura Latinoamericana",
-      imagen: "/Docente4.jpg",
+      nombre: "Lic. Eunice Santiago Manzano",
+      titulo: "Licenciada en Literatura",
+      departamento:"Investigacion",
+      correo: "esantiago@itsoeh.edu.mx",
+      imagen: "/LicEunice.jpg",
     },
     {
       id: 4,
-      nombre: "Dr. Alejandro Torres",
-      titulo: "Doctor en Economía",
-      departamento: "Facultad de Economía",
-      especialidad: "Macroeconomía",
-      imagen: "/Docente3.jpg",
+      nombre: "Dr. Francisco Javier Cuadros Romero ",
+      titulo: "Doctor en Inteligencia Artificial",
+      departamento:"Redes Neuronales",
+      correo: "fcuadros@itsoeh.edu.mx",
+      imagen: "/DrCuadros.jpg",
     },
     {
       id: 5,
-      nombre: "Dra. Gabriela Vázquez",
-      titulo: "Doctora en Medicina",
-      departamento: "Facultad de Medicina",
-      especialidad: "Neurología",
-      imagen: "/Docente6.jpg",
+      nombre: "Mtra. Yadira Eufemia Gaspar Morales",
+      titulo: "Maestria en Contabilidad y Finanzas",
+      departamento:"Administración de Proyectos",
+      correo: "ygaspar@itsoeh.edu.mx",
+      imagen: "/MtraYadi.jpg",
     },
     {
       id: 6,
-      nombre: "Dr. Roberto Sánchez",
-      titulo: "Doctor en Química",
-      departamento: "Facultad de Química",
-      especialidad: "Química Orgánica",
-      imagen: "/Docente5.jpeg",
+      nombre: "Mtro. Pedro Johan Salazr Pérez",
+      titulo: "Maestria en Telecomunicaciones",
+      departamento:"IOT",
+      correo: "psalazar@itsoeh.edu.mx",
+      imagen: "/MtroPedro.jpg",
     },
   ]
 
@@ -68,68 +68,60 @@ export default function DocentesPage() {
   const areasTrabajo = [
     {
       id: 1,
-      nombre: "Facultad de Ingeniería",
-      descripcion: "Departamentos de Computación, Civil, Mecánica, Eléctrica y más.",
+      nombre: "IoT(Internet de las Cosas):",
+      descripcion: "En esta area se desarrollan dispositivos conectados que recopilan, envían y reciben datos a través de internet. Ejemplos: sistemas de monitoreo ambiental, control agrícola automatizado, etc",
       imagen: "/area2.jpg",
-      docentes: 120,
-      proyectos: 45,
     },
     {
       id: 2,
-      nombre: "Facultad de Ciencias",
-      descripcion: "Departamentos de Física, Matemáticas, Biología y Ciencias de la Tierra.",
+      nombre: "Redes de Computadoras:",
+      descripcion: "En esta area se diseñan, configuran y mantienen infraestructuras que permiten la comunicación entre dispositivos. Incluye la creación de topologías de red, configuración de routers y switches, VLANs, y seguridad de redes.",
       imagen: "/area1.jpg",
-      docentes: 95,
-      proyectos: 38,
     },
     {
       id: 3,
-      nombre: "Facultad de Medicina",
-      descripcion: "Departamentos de Anatomía, Fisiología, Bioquímica y especialidades médicas.",
+      nombre: "Programación Web:",
+      descripcion: "En esta area se crean aplicaciones y sitios web que funcionan en navegadores. Involucra desarrollo frontend (lo que ve el usuario), backend (procesamiento en el servidor), bases de datos y servicios web. Ejemplos: plataformas de e-commerce, blogs o sistemas de reservas.",
       imagen:  "/area3.jpg",
-      docentes: 150,
-      proyectos: 62,
     },
     {
       id: 4,
-      nombre: "Facultad de Filosofía y Letras",
-      descripcion: "Departamentos de Literatura, Filosofía, Historia y Lenguas.",
-      imagen:  "/area4.jpeg",
-      docentes: 85,
-      proyectos: 30,
+      nombre: "Inteligencia Artificial (IA):",
+      descripcion: "Se desarrollan algoritmos y modelos que permiten a las máquinas aprender de datos y tomar decisiones. Aplicaciones comunes: reconocimiento facial, chatbots, predicción de ventas o análisis de imágenes médicas.",
+      imagen:  "/area4.jpg",
     },
   ]
   // Datos estáticos de vacantes por facultad
   const vacantesAcademicas = [
     {
       id: 1,
-      facultad: "Facultad de Medicina",
+      facultad: "Área IoT",
       puestos: [
-        "Profesor de Anatomía (Tiempo completo)",
-        "Investigador en Neurociencias (Medio tiempo)",
-        "Coordinador de Posgrado en Medicina"
+        "Profesor en Telecomunicaciones",
+        "Investigador en IoT",
+        "Desarrollador de Prototipos IoT (Medio tiempo)"
       ],
-      fechaLimite: "30 de noviembre 2023"
+      fechaLimite: "30 de noviembre 2026"
     },
     {
       id: 2,
-      facultad: "Facultad de Filosofía y Letras",
+      facultad: " Área Redes",
       puestos: [
-        "Profesor de Literatura Contemporánea",
-        "Investigador en Filosofía Antigua",
-        "Coordinador de Lenguas Extranjeras"
+        "Profesor de Redes de Computadoras",
+        "Investigador en Ciberseguridad de Redes",
+        "Administrador de Infraestructura Académica"
       ],
-      fechaLimite: "15 de diciembre 2023"
+      fechaLimite: "15 de diciembre 2026"
     },
     {
       id: 3,
-      facultad: "Facultad de Ingeniería",
+      facultad: "Área Web",
       puestos: [
-        "Profesor de Inteligencia Artificial",
-        "Investigador en Energías Renovables",
-        "Coordinador de Ingeniería Civil"
+        "Profesor de Desarrollo Web",
+        "Desarrollador Web Full Stack (Tiempo parcial)",
+        "Diseñador de Interfaces Web"
       ],
-      fechaLimite: "10 de enero 2024"
+      fechaLimite: "10 de enero 2026"
     }
   ];
 
@@ -222,8 +214,8 @@ export default function DocentesPage() {
                           <span className="text-gray-600">{docente.departamento}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium">Especialidad:</span>
-                          <span className="text-gray-600">{docente.especialidad}</span>
+                          <span className="font-medium">Correo Electronico:</span>
+                          <span className="text-gray-600">{docente.correo}</span>
                         </div>
                       </div>
                     </CardContent>
@@ -260,18 +252,6 @@ export default function DocentesPage() {
                       <CardTitle>{area.nombre}</CardTitle>
                       <CardDescription>{area.descripcion}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <div className="flex justify-between mb-4">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600">{area.docentes}</div>
-                          <div className="text-sm text-gray-500">Docentes</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600">{area.proyectos}</div>
-                          <div className="text-sm text-gray-500">Proyectos</div>
-                        </div>
-                      </div>
-                    </CardContent>
                   </Card>
                 ))}
               </div>
